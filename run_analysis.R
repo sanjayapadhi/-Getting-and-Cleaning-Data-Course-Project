@@ -8,11 +8,11 @@ dataFileZIP <- "./getdata-projectfiles-UCI-HAR-Dataset.zip"
 dirFile <- "./UCI HAR Dataset"
 
 # directory and file (txt ) of the tidy data:
-tidyDataFile <- "./tidy-UCI-HAR-dataset.txt"
-# tidyDataFileAvg <- "./tidy-UCI-HAR-dataset-Avg.csv"
+tidyDataFile <- "./tidyUCIdataset.txt" 
+
 
 # Directory and filename (.txt) of the clean/tidy data
-tidyDataFileAvgtxt <- "./tidy-UCI-HAR-dataset-Avg.txt"
+tidyDataFileAvgtxt <- "./tidyUCIdatasetAvg.txt"
 
 # Download the dataset (. ZIP), which does not exist
 if (file.exists(dataFileZIP) == FALSE) {
@@ -78,7 +78,5 @@ names(tidyDataAvgSet)[2] <- "Activity"# Created csv (tidy data set) in diretory
 # Created csv (tidy data set) in diretory
 write.table(tidyDataSet, tidyDataFile)
 
-# Created csv (tidy data set AVG) in diretory
-#  write.csv(tidyDataAvgSet, tidyDataFileAvg)
 # Created txt (tidy data set AVG) in diretory
 write.table(tidyDataAvgSet, tidyDataFileAvgtxt)
